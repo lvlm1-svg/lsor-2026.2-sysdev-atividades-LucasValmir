@@ -25,6 +25,13 @@ Para manter a padronização das práticas, a compatibilidade de redes e a segur
 ## O que foi realizado nessa aula
 Preparação e instalação do sistema linux Ubuntu_Server no ambiente virtual do VirtualBox. Dentro disso, foi visto como definir Idioma, Teclado, Rede e Perfil. Além de como Particionar o disco para instalação.
 
+
 ## Diretórios Necessários
+
+### Diretório da ISO
+Criar uma série de pastas no disco C para salvar a iso necessário para instalar o sistema na pasta Original. A iso pode ser baixada através desse [link](https://ubuntu.com/download/server/thank-you?version=22.04.5&architecture=amd64&lts=true).  
 ![legenda](./imagens/aula1_dir_Original.png)  
+
+### Diretório Importante
+Preparar outra sequência de pastas no disco C. Dessa vez é para armazenar o que acontece no sistema rodando na VM.
 ![legenda](./imagens/aula1_dir_Ubuntu-Server.png)  
