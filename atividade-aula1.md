@@ -48,8 +48,9 @@ Preparar outra sequência de pastas no disco C. Dessa vez é para servir de arma
 ## Criação da Máquina Virtual
 
 ### Início do VirtualBox
-![legenda](./imagens/aula1_passo3_inicio-virtualbox.png)  
 Após abrir o VirtualBox, o objetivo de agora é criar uma Máquina Virtual com o Sistema Ubuntu Server. Para isso só basta clicar em "Novo".
+![legenda](./imagens/aula1_passo3_inicio-virtualbox.png)  
+
 
 ### Definições Iniciais
 Com a nova tela aberto, só basta aplicar as seguintes configurações:
@@ -73,4 +74,55 @@ Agora na aba **Specify virtual hard disk** vamos definir a capacidade de armazen
 ### O Botão Finalizar
 Após definir e ajustar as configurações necessárias para criar uma Máquina Virtual, é preciso realizar uma ação muito importante que conclui essa etapa: clicar no botão inferior direito, onde está escrito "Finalizar".  
 ![legenda](./imagens/aula1_passo3_btn-finalizar.png)
+
+
+
+
+
+
+## Instalação do Sistema
+
+### Botão Iniciar
+Agora o próximo passo é executar pela primeira vez a Máquina Virtual para instalar o Ubuntu-Server. Na tela inicial do Virtualbox, perceba que foi criado um novo item. Selecione ele e tenha certeza que está selecionado para clicar em Iniciar.  
+![legenda](./imagens/aula1_passo3_finalizado_inicio-virtualbox.png)  
+
+### Try or Install
+Logo no início aparecerá um menu para escolher uma ação. A ação que iremos ir é "Try or Install Ubuntu Server".  
+Os comandos são feitos nas setas do teclado e no botão Enter para confirmar.  
+![legenda](./imagens/aula1_passo5_try-or-install.png)  
+
+### Linguagem
+Próxima tela é para escolher o idioma. Recomendamos deixar Inglês mesmo para treinar a língua.  
+![legenda](./imagens/aula1_passo5_language.png)  
+
+### Layout do Teclado
+Agora é para definir o estilo do teclado. Aqui depende do seu teclado, mas como estamos no Brasil a escolha pode ser "Portuguese (Brazil)".  
+![legenda](./imagens/aula1_passo5_keyboard.png)  
+
+### Confirmação do Ubuntu Server
+Já nessa tela pede para escolher qual Sistema instalar. Escolha a primeira opções e siga em Done.  
+![legenda](./imagens/aula1_passo5_confirmacao-ubuntu-server.png)  
+
+
+
+
+
+
+## Definições de Rede
+
+### Rede
+Aqui irá mostra a interface virtual de rede e seu endereço IP. Não mexa em nada, apenas siga em Done.  
+![legenda](./imagens/aula1_passo5_network-infor.png)  
+
+### Proxy
+O mesmo se repete aqui... Não mexa em nada, apenas siga em Done.  
+![legenda](./imagens/aula1_passo5_proxy.png)  
+
+### Mirror
+Já nessa página algumas coisas irá carregar. Você apenas esperar e seguir em frente clicando em Done.  
+![legenda](./imagens/aula1_passo5_mirror.png)  
+
+
+
+
 
