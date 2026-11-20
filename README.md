@@ -19,5 +19,6 @@ Para manter a padronização das práticas, a compatibilidade de redes e a segur
 
   ## Aulas
 - Aula 1: https://github.com/lvlm1-svg/lsor-2026.2-sysdev-atividades-LucasValmir/blob/main/atividade-aula1.md
+- Aula 2: https://github.com/lvlm1-svg/lsor-2026.2-sysdev-atividades-LucasValmir/blob/main/atividade-aula2.md
 - Aula 3: https://github.com/lvlm1-svg/lsor-2026.2-sysdev-atividades-LucasValmir/blob/main/atividade-aula3.md
   
