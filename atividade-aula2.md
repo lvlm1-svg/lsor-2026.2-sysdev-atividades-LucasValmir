@@ -87,3 +87,71 @@ Veja em baixo como conferir o resultado:
 ![legenda](./imagens/aula2_passo2_devs-conferidos.png)  
 
 
+
+
+
+
+## Diretório Compartilhado
+Agora vamos criar uma pasta no diretório /srv/projeto para todos os desenvolvedores.  
+
+### Criação
+![legenda](./imagens/aula2_passo3_mkdir-projeto.png)  
+O comando principal (mkdir), foi usado como usuário root (sudo) e com a flag -p (usada para evitar erros caso o diretório já exista).  
+
+### Análise
+Vamos agora analisar as permissões desse diretório utilizando o comando `ls -ld`:  
+![legenda](./imagens/aula2_passo3_ls-projeto.png)  
+O primeiro caractere (d) indica que é um diretório.  
+E se a gente dividir em 3 grupos de 3 caracteres essa sequência "rwxr-xr-x", temos "rwx", "r-x" e "r-x".  
+O primeiro indica que o usuário root tem permissão de ler (r), escrever (w) e executar/navegar (x) o diretório. O segundo indica que grupo associado (root) tem permissão de leitura e navegação. Já o terceiro diz que os demais usuários (Outros) tem permissão de navegação e leitura.  
+
+
+
+
+
+## Mudança de Dono e de Grupoo Associado
+O que vamos fazer agora é tornar o diretório /srv/projeto ser administrado pelo usuário administrador e manipulado pela equipe de desenvolvimento (grupo devs).
+
+### Alteração de Dono
+Para mudar, o comando usando é `chown`:  
+![legenda](./imagens/aula2_passo4_chown-administrador-projeto.png)  
+
+### Mudança de Grupo
+Para alterar, é usado o comando `chgrp`:  
+![legenda](./imagens/aula2_passo4_chgrp-devs-projeto.png)  
+
+### Validação do Resultado
+Usando o mesmo comando para analisar as permissões do diretório...  
+![legenda](./imagens/aula2_passo4_ls-projeto.png)  
+Percebemos que a sequência não mudou, o que mudou foi o que vinha depois. Antes era "root" e "root". Agora é "administrador" e "devs". Isso está Ok.
+
+
+
+
+
+
+
+## Política de Segurança no Trabalho
+Todos se reuniram e chegaram na seguine conclussão: 
+- O Dono (administrador) e o Grupo de Devenvolvimento (devs) devem ter controle total: leitura, escrita e navegação na pasta projeto.
+- Outros estão proibidos de fazer qualquer ação na pasta.
+
+### Aplicando Política no Sistema
+Para usar as regras apresentadas é preciso passar para notação numérica e usar o comando `chmod` sobre o diretório da pasta.  
+Abaixo é apresentada a tabela de notação numérica:
+- `-` -> 0
+- `r` -> 4
+- `w` -> 2
+- `x` -> 1  
+
+Para transformar uma sequência em notação numérica, só basta somar os valores.  
+O Dono precisa ter `rwx`. Então: 4 + 2 + 1, resultando 7. O mesmo se repete para o Grupo devs. Já em Outros, onde o novato está inserido, a soma resultará em 0 (`---`).  
+Agora é usar o comando no modo root, com a númeração 770 e com o diretório projeto.  
+![legenda](./imagens/aula2_passo5_política-770.png)  
+
+### Análise do Resultado
+Usando o mesmo comando para analisar as permissões do diretório...  
+![legenda](./imagens/aula2_passo5_ls-projeto.png)  
+Percebemos que, ao divir novamente os 3 grupos, temos agora: "rwx", "rwx" e "---". Isso indica que o administrador (Dono) tem permissão para ler, escrever e navegar no diretório. O mesmo para o Grupo devs. Já o terceiro indica que aqueles que estão inseridos em Outros, não tem permissões.
+
+
