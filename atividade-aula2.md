@@ -155,3 +155,41 @@ Usando o mesmo comando para analisar as permissões do diretório...
 Percebemos que, ao divir novamente os 3 grupos, temos agora: "rwx", "rwx" e "---". Isso indica que o administrador (Dono) tem permissão para ler, escrever e navegar no diretório. O mesmo para o Grupo devs. Já o terceiro indica que aqueles que estão inseridos em Outros, não tem permissões.
 
 
+
+
+
+
+
+## Criação de um arquivo p/ testes
+Agora vamos criar um arquivo de texto na pasta dos desenvolvedores.  
+
+### O Comando e sua Estrutura 
+`echo` "conteúdo" > /diretorio/final/nome_do_arquivo.txt    
+![legenda](./imagens/aula2_passo6_criacao-textFile.png)   
+Aqui criamos um arquivo de texto contendo "Especificacao tecnica do roteador de borda" no diretório /srv/projeto, chamado config_redes.txt  
+
+### Verificação
+Executando `ls -l` no caminho do arquivo, é possível ver se ele existe e ver suas propriedades.   
+![legenda](./imagens/aula2_passo6_criacao-textFile.png)   
+
+### Alteração de permissões
+O que queremos fazer agora é garantir que apenas Dono e Grupo possa ler e escrever, enquanto os Outros nada podem fazer. Para fazer isso, só basta lembrar do passo anterior.  
+![legenda](./imagens/aula2_passo6_alteracao-textFile.png)
+
+
+
+
+
+
+
+## Testes com o fulano
+Para começar com os testes, é preciso entrar no login do fulano. Para isso o comando usando é o `su` com `-` e o nome do usuário desejado (queremos o fulado).  Depois é só colocar a senha do fulano e... Pronto! Agora o sistema está logado em outro usuário.
+![legenda](./imagens/aula2_passo7_troca-usuario.png)  
+
+### Navegação pela Pasta
+Tente acessar o diretório dos desenvolvedores. O comando que navega é `cd`, junto com o caminho.  
+![legenda](./imagens/aula2_passo7_navegacao-pasta-projeto.png)  
+Perceba que foi possível entrar no diretório. Além disso, o comando para ver as propriedades foi executado para confirmar que as configurações ainda estão valendo.
+
+### Gerando Modificações
+ 
